@@ -7,11 +7,10 @@ matr[-1] += ' ' * (z_len - len(matr[-1]))
 s_res = ''
 for i in range(len(matr)):
     s_res += matr[i][0]
-
 for j in range(1, len(matr[0]) // 2):
-    for i in range(len(matr) - 1):
+    for i in range(len(matr)):
         s_res += matr[i][j] + matr[i][z_len - j]
 for i in range(len(matr)):
     s_res += matr[i][z_len // 2]
-print(s_res)
+print(s_res.replace(' ', ''))
 
